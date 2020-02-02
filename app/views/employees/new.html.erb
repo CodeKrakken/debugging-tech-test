@@ -1,0 +1,36 @@
+<h2 class="pb-2">New Employee</h2>
+
+<%= form_with(model: [@company, @employee], local: true) do |form| %>
+
+<% if @employee.errors.any? %>
+  <div id="error_explanation">
+    <h2 class="pb-2">
+      <%= pluralize(@employee.errors.count, "error") %>
+      prohibited this employee from being saved:
+    </h2>
+    <ul>
+      <% @employee.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<p>
+  <div class="form-group">
+    <%= form.label :forename %>
+    <%= form.text_field :forename, class: "form-control" %>
+
+    <p>
+      <%= form.label :surname %>
+      <%= form.text_field :middlename, class: "form-control" %>
+    </p>
+
+    <p>
+      <button type="submit" class="btn btn-primary">Save</button>
+      <%= link_to "Back to employees list", company_employees_path(@company), class: "btn btn-primary" %>
+    </p>
+  <% end %>
+
+
+</div>

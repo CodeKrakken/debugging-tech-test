@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Smart CS Support Tech Test</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
+    <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark bg-primary border-1 border-bottom border-light">
+      <%= link_to root_path, class: "navbar-brand" do %>
+      <img src="/images/smart-logo.svg" height="40" alt="smart-logo">
+    <% end %>
+  </nav>
+  <div class="container mt-4">
+    <%= yield %>
+  </div>
+</body>
+</html>

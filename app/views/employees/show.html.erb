@@ -1,0 +1,13 @@
+<p>
+  <strong>Forename:</strong>
+  <%= @employee.forename %>
+</p>
+
+<p>
+  <strong>Surname:</strong>
+  <%= @employee.surname %>
+</p>
+
+<%= link_to "Edit", edit_company_employee_path(@company, @employee), class: "btn btn-primary" %>
+
+<%= link_to "Back to employees List", company_employees_path(@company), class: "btn btn-outline-primary" %>

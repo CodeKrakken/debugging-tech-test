@@ -1,0 +1,30 @@
+<h2 class="pb-2">Listing Employees</h2>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Company</th>
+      <th>Forename</th>
+      <th>Surname</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @employees.each do |employee|%>
+      <tr>
+        <td><%= link_to employee.id, company_employee_path(@company, employee) %></td>
+        <td><%= link_to employee.company.name, [@company] %></td>
+        <td><%= employee.forename %></td>
+        <td><%= employee.surname %></td>
+        <td>
+          <%= link_to "Edit Employee", edit_company_employee_path(@company, employee), class: "btn btn-primary btn-sm" %>
+          <%= link_to "Destroy Employee", [@company, employee], method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-sm" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
+<%= link_to "Create New Employee", new_company_employee_path(@company), class: "btn btn-primary" %>

@@ -1,0 +1,28 @@
+Started GET "/companies/" for ::1 at 2020-02-02 11:40:06 +0000
+  [1m[35m (13.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.erb within layouts/application
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/companies/index.html.erb:15
+  Rendered companies/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 5174)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/loga.jegede/Downloads/tech_support_test 2/public/packs
+[Webpacker] Hash: d2201793e5f0d585ebbf
+Version: webpack 4.41.5
+Time: 3515ms
+Built at: 02/02/2020 11:40:20 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-c5240e03f3be01e610eb.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c5240e03f3be01e610eb.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-c5240e03f3be01e610eb.js js/application-c5240e03f3be01e610eb.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 800 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 13743ms (Views: 13710.4ms | ActiveRecord: 0.9ms | Allocations: 109381)
+
+
