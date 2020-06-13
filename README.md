@@ -14,7 +14,7 @@ This suggests an issue pulling from the database. I suspect that each page of /c
 
 ## Issue 2
 
-Advancing along this branch of the program, I click `Edit`  employee of Company 1. No matter which employee I select, it always takes me to Goofy's details. It looks like the URLs are wrong: the edit links are as follows:
+Advancing along this branch of the program, I check the `Edit` link for each employee of Company 1. It always takes me to Employee 1's details. It looks like the URLs are wrong - the edit links are as follows:
 <br><br>
 /companies/1/employees/1/edit<br>
 /companies/2/employees/1/edit<br>
@@ -28,7 +28,14 @@ Since they are all from company 1, it would be logical to set the links thus:
 /companies/1/employees/3/edit<br>
 /companies/1/employees/4/edit
 <br><br>
-However, since the site is pulling Company 1 data on all pages, we cannot yet clarify. However the fact that the pages exist suggests that they would work correctly if Issue 1 were resolved, and that the cause of this issue is a syntax issue in the routing of the edit buttons.
+A quick check of Company 2's `edit` links yields the following URLs:<br><br>
+/companies/1/employees/2/edit<br>
+/companies/2/employees/2/edit<br>
+/companies/3/employees/2/edit<br>
+/companies/4/employees/2/edit
+<br><br>
+Each one displays the details for Company 1 Employee 2. This pattern follows for Companies 3 & 4, suggesting that the cause of this issue is a syntax issue in the routing of the edit buttons, specifically that the Company and Employee numbers hsve been switched.<br>
+However, since the site is pulling Row 1 data for all companies, we cannot yet clarify.
 
 ## Issue 3
 
