@@ -14,7 +14,7 @@ This suggests an issue pulling from the database. I suspect that each page of /c
 
 ## Issue 2
 
-Advancing along this branch of the program, I click <Edit>  employee of Company 1. No matter which employee I select, it always takes me to Goofy's details. It looks like the URLs are wrong: the edit links are as follows:
+Advancing along this branch of the program, I click `Edit`  employee of Company 1. No matter which employee I select, it always takes me to Goofy's details. It looks like the URLs are wrong: the edit links are as follows:
 <br><br>
 /companies/1/employees/1/edit<br>
 /companies/2/employees/1/edit<br>
