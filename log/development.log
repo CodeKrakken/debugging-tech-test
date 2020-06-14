@@ -396,3 +396,83 @@ Processing by EmployeesController#index as HTML
 Completed 200 OK in 56ms (Views: 49.7ms | ActiveRecord: 2.3ms | Allocations: 17164)
 
 
+Started GET "/companies/new" for ::1 at 2020-06-14 18:12:25 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CompaniesController#new as HTML
+  Rendering companies/new.html.erb within layouts/application
+  Rendered companies/new.html.erb within layouts/application (Duration: 13.0ms | Allocations: 2772)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 106ms (Views: 88.4ms | ActiveRecord: 0.6ms | Allocations: 25891)
+
+
+Started POST "/companies" for ::1 at 2020-06-14 18:12:27 +0100
+Processing by CompaniesController#create as HTML
+  Parameters: {"authenticity_token"=>"TZ/+6TwALjWwSn8qquHy0Tjnm9ad8VofbUKdL4Bt9oiA3ap87uCG/vqe5oxGEMvWPNJu6C392CcZowJZiFeREg==", "company"=>{"name"=>"", "details"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/companies_controller.rb:21:in `create'
+  [1m[36mCompany Create (1.3ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", ""], ["details", ""], ["created_at", "2020-06-14 17:12:27.362671"], ["updated_at", "2020-06-14 17:12:27.362671"]]
+  ↳ app/controllers/companies_controller.rb:21:in `create'
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/companies_controller.rb:21:in `create'
+Redirected to http://localhost:3000/companies/6/employees
+Completed 302 Found in 13ms (ActiveRecord: 4.0ms | Allocations: 2964)
+
+
+Started GET "/companies/6/employees" for ::1 at 2020-06-14 18:12:27 +0100
+Processing by EmployeesController#index as HTML
+  Parameters: {"company_id"=>"6"}
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:53:in `find_company'
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."company_id" = ?[0m  [["company_id", 6]]
+  ↳ app/views/employees/index.html.erb:15
+  Rendered employees/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1911)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 23.2ms | ActiveRecord: 0.7ms | Allocations: 13828)
+
+
+Started GET "/" for ::1 at 2020-06-14 18:21:32 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 338)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 91ms (Views: 84.0ms | ActiveRecord: 0.0ms | Allocations: 19366)
+
+
+Started GET "/companies/new" for ::1 at 2020-06-14 18:21:37 +0100
+Processing by CompaniesController#new as HTML
+  Rendering companies/new.html.erb within layouts/application
+  Rendered companies/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 2503)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 23.0ms | ActiveRecord: 1.0ms | Allocations: 15431)
+
+
+Started POST "/companies" for ::1 at 2020-06-14 18:21:46 +0100
+Processing by CompaniesController#create as HTML
+  Parameters: {"authenticity_token"=>"n1bbtTobFq+1bhCyAWq9c2BPGTkdCVBxTICHVNPI6bAIKKofb91P7KZryZI6/bzKbrGxKRsHVx//2Kx5MnaWfQ==", "company"=>{"name"=>"Bumwag", "details"=>"The BUmwaggers"}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/companies_controller.rb:21:in `create'
+  [1m[36mCompany Create (0.8ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Bumwag"], ["details", "The BUmwaggers"], ["created_at", "2020-06-14 17:21:46.901564"], ["updated_at", "2020-06-14 17:21:46.901564"]]
+  ↳ app/controllers/companies_controller.rb:21:in `create'
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/companies_controller.rb:21:in `create'
+Redirected to http://localhost:3000/companies/7/employees
+Completed 302 Found in 15ms (ActiveRecord: 2.9ms | Allocations: 2994)
+
+
+Started GET "/companies/7/employees" for ::1 at 2020-06-14 18:21:46 +0100
+Processing by EmployeesController#index as HTML
+  Parameters: {"company_id"=>"7"}
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:53:in `find_company'
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."company_id" = ?[0m  [["company_id", 7]]
+  ↳ app/views/employees/index.html.erb:15
+  Rendered employees/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 1910)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 31.5ms | ActiveRecord: 1.3ms | Allocations: 13788)
+
+

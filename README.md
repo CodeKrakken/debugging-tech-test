@@ -73,3 +73,5 @@ Although clicking `Add Employee` on `/companies/[n]` will only take us to `/comp
 ## Solutions
 
 * Changed `app/views/companies/index.html.erb` line 21 from `<%= link_to "Show", company_path(company), class: "btn btn-primary btn-sm"%>` to `<%= link_to "Show", company_employees_path(company), class: "btn btn-primary btn-sm"%>`.
+
+* Changed `app/controllers/companies_controller.rb line 22 from `redirect_to @company` to `redirect_to company_employees_path(@company)`.
