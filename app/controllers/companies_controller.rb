@@ -19,7 +19,7 @@ class CompaniesController < ApplicationController
     @company = Company.new(permitted_params[:company])
 
     if @company.save
-      redirect_to @company
+      redirect_to company_employees_path(@company)
     else
       render 'new'
     end
