@@ -68,4 +68,8 @@ Although clicking `Add Employee` on `/companies/[n]` will only take us to `/comp
 * On `/companies/new`, change `Save` button route from `/companies/[n]` to `/companies/[n]/employees`.
 * Remove `/companies/[n]` pages.
 <br>These actions will circumvent the first two bugs.<br>
-* Remove current `Surname` field on `/companies/[n]/employees/new` and rename `Middlename` field to `Surname`.
+* Remove current `Surname` field on `/companies/[n]/employees/new` and rename `Middlename` field to `Surname`. 
+
+## Solutions
+
+* Changed `app/views/companies/index.html.erb` line 21 from `<%= link_to "Show", company_path(company), class: "btn btn-primary btn-sm"%>` to `<%= link_to "Show", company_employees_path(company), class: "btn btn-primary btn-sm"%>`.

@@ -18,7 +18,7 @@
         <td><%= company.name %></td>
         <td><%= company.details %></td>
         <td class="text-center">
-          <%= link_to "Show", company_path(company), class: "btn btn-primary btn-sm"%>
+          <%= link_to "Show", company_employees_path(company), class: "btn btn-primary btn-sm"%>
           <%= link_to "Destroy", company_path(company), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-sm" %>
         </td>
       </tr>
