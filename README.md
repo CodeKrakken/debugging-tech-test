@@ -11,7 +11,7 @@ The first bug I found was on `/companies/[n]`. Although each `Show` button on `/
 <br>
 This suggests an issue pulling from the database. I suspect that each page of `/companies/[n]` is hardcoded to pull data from the row 1 of the table. This is borne out by the effect of deleting Company 1: the remaining pages all show Company 2's data, now moved up in the database to row 1.
 <br>
-This issue also affects creation of a company on `/companies/new`. It saves the new company details correctly and routes to the correct company details page, but the details displayed are for row 1 of the database.
+This issue also affects creation of a company on `/companies/new`. It saves the new company details correctly and routes to the correct company details url, but the details displayed are for row 1 of the database.
 
 ## Issue 2
 
@@ -58,11 +58,14 @@ Although clicking `Add Employee` on `/companies/[n]` will only take us to `/comp
 ## Bugs
 
 * `/companies/[n]` always displays details for Row 1 of the database table
-* `Edit` links are incorrectly written on `/companies/[n]
+* `Edit` links are incorrectly defined on `/companies/[n]`
 * Fields are incorrectly labelled on `/companies/[n]/employees/new`
 <br><br>
 
 ## Recommendations
 
-* Change `Show` links on `/companies` from `/companies/[n]` to `/companies/[n]/employees`, and remove `/companies/[n]` pages. This will remove the first two bugs.
+* On `/companies`, change `Show` button routes from `/companies/[n]` to `/companies/[n]/employees`.
+* On `/companies/new`, change `Save` button route from `/companies/[n]` to `/companies/[n]/employees`.
+* Remove `/companies/[n]` pages.
+<br>These actions will circumvent the first two bugs.<br>
 * Remove current `Surname` field on `/companies/[n]/employees/new` and rename `Middlename` field to `Surname`.
