@@ -46,7 +46,7 @@ Each one displays the details for Company 1 Employee 2. This pattern follows for
 
 ## Issue 4
 
-Editing cmployee details and clicking `Save` updates the details for the displayed employee. However it then takes us to a near duplicate of `/companies/[n]`, with `/employees` appended to each URL. This is also where we land when we click `Back to employees list`, or return from `/companies[n]/employees/new`. This duplicate, `/companies/[n]/employees` displays the wrong company's details, but this is due to the routing of `Edit` buttons on `/companies/[n]` - it is not a separate bug.<br>
+Editing employee details and clicking `Save` updates the details for the displayed employee. However it then takes us to a near duplicate of `/companies/[n]`, with `/employees` appended to each URL. This is also where we land when we click `Back to employees list`, or return from `/companies[n]/employees/new`. This duplicate, `/companies/[n]/employees` displays the wrong company's details, but this is due to the routing of `Edit` buttons on `/companies/[n]` - it is not a separate bug.<br>
 The `Edit` button for each employee has here been replaced by `Edit Employee` and `Destroy Employee` - both buttons function correctly. There is no `Back to companies list` button here but I'm not sure this can be defined as a bug so much as a missing feature.
 <br><br>
 
