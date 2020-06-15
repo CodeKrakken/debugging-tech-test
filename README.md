@@ -87,3 +87,5 @@ Although clicking `Add Employee` on `/companies/[n]` will only take us to `/comp
 * Changed `app/model/employee.rb line 5` from `validates :forename, :surname, :middlename, presence: true` to `validates :forename, :surname, presence: true`.
 
 * Changed `app/views/employees/new.html.erb line 26` from `<%= form.text_field :middlename, class: "form-control" %>` to `<%= form.text_field :surname, class: "form-control" %>`.
+
+* Deleted `db/migrate/20200120121725_add_middlename_to_employees_table.rb` and all `middlename` attributes from `db/seeds.rb`.
