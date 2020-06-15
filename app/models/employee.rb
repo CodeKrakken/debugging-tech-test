@@ -2,5 +2,5 @@
 
 class Employee < ApplicationRecord
   belongs_to :company
-  validates :forename, :surname, :middlename, presence: true
+  validates :forename, :surname, presence: true
 end

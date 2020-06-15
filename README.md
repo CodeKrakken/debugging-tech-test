@@ -78,8 +78,12 @@ Although clicking `Add Employee` on `/companies/[n]` will only take us to `/comp
 
 * Changed `app/views/companies/index.html.erb` line 21 from `<%= link_to "Show", company_path(company), class: "btn btn-primary btn-sm"%>` to `<%= link_to "Show", company_employees_path(company), class: "btn btn-primary btn-sm"%>`.
 
-* Changed `app/controllers/companies_controller.rb line 22 from `redirect_to @company` to `redirect_to company_employees_path(@company)`.
+* Changed `app/controllers/companies_controller.rb line 22` from `redirect_to @company` to `redirect_to company_employees_path(@company)`.
 
 * Added `<%= link_to "Back to companies List", companies_path, class: "btn btn-outline-primary" %>` to `/app/views/employees/index.html.erb`.
 
-* Deleted `/app/views/companies/show.html.erb`.
+* Deleted `app/views/companies/show.html.erb`.
+
+* Changed `app/model/employee.rb line 5` from `validates :forename, :surname, :middlename, presence: true` to `validates :forename, :surname, presence: true`.
+
+* Changed `app/views/employees/new.html.erb line 26` from `<%= form.text_field :middlename, class: "form-control" %>` to `<%= form.text_field :surname, class: "form-control" %>`.
