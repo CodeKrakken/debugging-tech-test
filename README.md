@@ -138,11 +138,11 @@ These actions will circumvent the first two bugs.
 
 <br>
 
-* Changed `app/views/companies/index.html.erb line 21` from `<%= link_to "Show", company_path(company), class: "btn btn-primary btn-sm"%>` to `<%= link_to "Show", company_employees_path(company), class: "btn btn-primary btn-sm"%>`.
+* Changed `app/views/companies/index.html.erb line 21` from <br>`<%= link_to "Show", company_path(company), class: "btn btn-primary btn-sm"%>` to <br>`<%= link_to "Show", company_employees_path(company), class: "btn btn-primary btn-sm"%>`.
 
-* Changed `app/controllers/companies_controller.rb line 22` from `redirect_to @company` to `redirect_to company_employees_path(@company)`.
+* Changed `app/controllers/companies_controller.rb line 22` from <br>`redirect_to @company` to <br>`redirect_to company_employees_path(@company)`.
 
-* Added `<%= link_to "Back to companies List", companies_path, class: "btn btn-outline-primary" %>` to `/app/views/employees/index.html.erb`.
+* Added `<%= link_to "Back to companies List", companies_path, class: "btn btn-outline-primary" %>` to <br>`/app/views/employees/index.html.erb`.
 
 * Deleted `app/views/companies/show.html.erb`.
 
@@ -152,9 +152,9 @@ These actions will circumvent the first two bugs.
 
 <br>
 
-* Changed `app/model/employee.rb line 5` from `validates :forename, :surname, :middlename, presence: true` to `validates :forename, :surname, presence: true`.
+* Changed `app/model/employee.rb line 5` from <br>`validates :forename, :surname, :middlename, presence: true` to <br>`validates :forename, :surname, presence: true`.
 
-* Changed `app/views/employees/new.html.erb line 26` from `<%= form.text_field :middlename, class: "form-control" %>` to `<%= form.text_field :surname, class: "form-control" %>`.
+* Changed `app/views/employees/new.html.erb line 26` from <br>`<%= form.text_field :middlename, class: "form-control" %>` to <br>`<%= form.text_field :surname, class: "form-control" %>`.
 
 * Deleted `db/migrate/20200120121725_add_middlename_to_employees_table.rb` and all `middlename` attributes from `db/seeds.rb`.
 
@@ -164,7 +164,7 @@ These actions will circumvent the first two bugs.
 
 <br>
 
-* Changed `app/views/employees/index.html.erb line 1` from `<h2 class="pb-2">Listing Employees</h2>` to `<h2 class="pb-2">Listing Employees of <%= @company.name %></h2>`. Without this change, `/companies/[n]/employees`, a newly created company does not display the company name, which may confuse users.
+* Changed `app/views/employees/index.html.erb line 1` from <br>`<h2 class="pb-2">Listing Employees</h2>` to <br>`<h2 class="pb-2">Listing Employees of <%= @company.name %></h2>`. <br>Without this change a newly created company does not display the company name, which may confuse users.
 
 <br>
 
