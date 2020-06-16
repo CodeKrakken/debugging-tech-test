@@ -115,4 +115,7 @@ These actions dealt with all three bugs. My last action was in the name of human
 
 I used RSpec and Capybara to test my bug fixes. I would ideally have set up the tests first, but with limited time I had to prioritise. To compensate for this and avoid evergreen testing, I made sure to purposefully write a failing version first, searching for content that I know not to be there.<br>
 I began with a couple of smoke tests, before focusing on the bug fixes. I am happy to report there were no major issues with testing.
-<br>
+
+<br><br>
+
+![Passing Tests](https://user-images.githubusercontent.com/52076323/84813321-b4097600-b007-11ea-9ae3-bda223847c34.png)
