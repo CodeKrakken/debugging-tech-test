@@ -1072,3 +1072,815 @@ Processing by EmployeesController#index as HTML
 [Webpacker] Everything's up-to-date. Nothing to do
 Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.3ms | Allocations: 9775)
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.2ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mickeys Plaice"], ["details", "Fish Shop"], ["created_at", "2020-06-16 16:27:20.588240"], ["updated_at", "2020-06-16 16:27:20.588240"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Goofy"], ["surname", "Cartoon"], ["created_at", "2020-06-16 16:27:20.597073"], ["updated_at", "2020-06-16 16:27:20.597073"], ["company_id", 45]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Minnie"], ["surname", "Mouse"], ["created_at", "2020-06-16 16:27:20.598860"], ["updated_at", "2020-06-16 16:27:20.598860"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Donald"], ["surname", "Duck"], ["created_at", "2020-06-16 16:27:20.600045"], ["updated_at", "2020-06-16 16:27:20.600045"], ["company_id", 45]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Daffy"], ["surname", "Duck"], ["created_at", "2020-06-16 16:27:20.601124"], ["updated_at", "2020-06-16 16:27:20.601124"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Alans Autos"], ["details", "Garage"], ["created_at", "2020-06-16 16:27:20.602011"], ["updated_at", "2020-06-16 16:27:20.602011"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Dave"], ["surname", "Grease"], ["created_at", "2020-06-16 16:27:20.602848"], ["updated_at", "2020-06-16 16:27:20.602848"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Bob"], ["surname", "Spanner"], ["created_at", "2020-06-16 16:27:20.603585"], ["updated_at", "2020-06-16 16:27:20.603585"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "John"], ["surname", "Wrench"], ["created_at", "2020-06-16 16:27:20.604321"], ["updated_at", "2020-06-16 16:27:20.604321"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Gatwick"], ["details", "Airport"], ["created_at", "2020-06-16 16:27:20.605042"], ["updated_at", "2020-06-16 16:27:20.605042"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Michael"], ["surname", "Plane"], ["created_at", "2020-06-16 16:27:20.605801"], ["updated_at", "2020-06-16 16:27:20.605801"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Janet"], ["surname", "Board"], ["created_at", "2020-06-16 16:27:20.606535"], ["updated_at", "2020-06-16 16:27:20.606535"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Sarah"], ["surname", "Desert"], ["created_at", "2020-06-16 16:27:20.607281"], ["updated_at", "2020-06-16 16:27:20.607281"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Curtains for u"], ["details", "Fabric Shop"], ["created_at", "2020-06-16 16:27:20.607992"], ["updated_at", "2020-06-16 16:27:20.607992"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "David"], ["surname", "Suede"], ["created_at", "2020-06-16 16:27:20.608749"], ["updated_at", "2020-06-16 16:27:20.608749"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Jess"], ["surname", "Blinds"], ["created_at", "2020-06-16 16:27:20.609467"], ["updated_at", "2020-06-16 16:27:20.609467"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Fabian"], ["surname", "Shades"], ["created_at", "2020-06-16 16:27:20.610227"], ["updated_at", "2020-06-16 16:27:20.610227"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2020-06-16 17:27:21 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 337)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1641ms (Views: 1634.9ms | ActiveRecord: 0.0ms | Allocations: 32800)
+Started GET "/assets/application-e745433e8684ce47398cd095c23a396a1efcf43bae68d64b6ed14ef580e83de4.css" for 127.0.0.1 at 2020-06-16 17:27:23 +0100
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.2ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mickeys Plaice"], ["details", "Fish Shop"], ["created_at", "2020-06-16 16:27:23.850169"], ["updated_at", "2020-06-16 16:27:23.850169"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Goofy"], ["surname", "Cartoon"], ["created_at", "2020-06-16 16:27:23.851931"], ["updated_at", "2020-06-16 16:27:23.851931"], ["company_id", 45]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Minnie"], ["surname", "Mouse"], ["created_at", "2020-06-16 16:27:23.853201"], ["updated_at", "2020-06-16 16:27:23.853201"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Donald"], ["surname", "Duck"], ["created_at", "2020-06-16 16:27:23.854434"], ["updated_at", "2020-06-16 16:27:23.854434"], ["company_id", 45]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Daffy"], ["surname", "Duck"], ["created_at", "2020-06-16 16:27:23.855595"], ["updated_at", "2020-06-16 16:27:23.855595"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Alans Autos"], ["details", "Garage"], ["created_at", "2020-06-16 16:27:23.856307"], ["updated_at", "2020-06-16 16:27:23.856307"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Dave"], ["surname", "Grease"], ["created_at", "2020-06-16 16:27:23.857067"], ["updated_at", "2020-06-16 16:27:23.857067"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Bob"], ["surname", "Spanner"], ["created_at", "2020-06-16 16:27:23.857865"], ["updated_at", "2020-06-16 16:27:23.857865"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "John"], ["surname", "Wrench"], ["created_at", "2020-06-16 16:27:23.858664"], ["updated_at", "2020-06-16 16:27:23.858664"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Gatwick"], ["details", "Airport"], ["created_at", "2020-06-16 16:27:23.859413"], ["updated_at", "2020-06-16 16:27:23.859413"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Michael"], ["surname", "Plane"], ["created_at", "2020-06-16 16:27:23.860208"], ["updated_at", "2020-06-16 16:27:23.860208"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Janet"], ["surname", "Board"], ["created_at", "2020-06-16 16:27:23.860981"], ["updated_at", "2020-06-16 16:27:23.860981"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Sarah"], ["surname", "Desert"], ["created_at", "2020-06-16 16:27:23.861812"], ["updated_at", "2020-06-16 16:27:23.861812"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Curtains for u"], ["details", "Fabric Shop"], ["created_at", "2020-06-16 16:27:23.862659"], ["updated_at", "2020-06-16 16:27:23.862659"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "David"], ["surname", "Suede"], ["created_at", "2020-06-16 16:27:23.863570"], ["updated_at", "2020-06-16 16:27:23.863570"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Jess"], ["surname", "Blinds"], ["created_at", "2020-06-16 16:27:23.864853"], ["updated_at", "2020-06-16 16:27:23.864853"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Fabian"], ["surname", "Shades"], ["created_at", "2020-06-16 16:27:23.865834"], ["updated_at", "2020-06-16 16:27:23.865834"], ["company_id", 48]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/companies" for 127.0.0.1 at 2020-06-16 17:27:23 +0100
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.erb within layouts/application
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  Rendered companies/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 5583)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.3ms | Allocations: 11591)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.2ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mickeys Plaice"], ["details", "Fish Shop"], ["created_at", "2020-06-16 16:27:24.192362"], ["updated_at", "2020-06-16 16:27:24.192362"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Goofy"], ["surname", "Cartoon"], ["created_at", "2020-06-16 16:27:24.193533"], ["updated_at", "2020-06-16 16:27:24.193533"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Minnie"], ["surname", "Mouse"], ["created_at", "2020-06-16 16:27:24.194398"], ["updated_at", "2020-06-16 16:27:24.194398"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Donald"], ["surname", "Duck"], ["created_at", "2020-06-16 16:27:24.195265"], ["updated_at", "2020-06-16 16:27:24.195265"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Daffy"], ["surname", "Duck"], ["created_at", "2020-06-16 16:27:24.196028"], ["updated_at", "2020-06-16 16:27:24.196028"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Alans Autos"], ["details", "Garage"], ["created_at", "2020-06-16 16:27:24.196762"], ["updated_at", "2020-06-16 16:27:24.196762"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Dave"], ["surname", "Grease"], ["created_at", "2020-06-16 16:27:24.197545"], ["updated_at", "2020-06-16 16:27:24.197545"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Bob"], ["surname", "Spanner"], ["created_at", "2020-06-16 16:27:24.198284"], ["updated_at", "2020-06-16 16:27:24.198284"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "John"], ["surname", "Wrench"], ["created_at", "2020-06-16 16:27:24.199061"], ["updated_at", "2020-06-16 16:27:24.199061"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Gatwick"], ["details", "Airport"], ["created_at", "2020-06-16 16:27:24.199828"], ["updated_at", "2020-06-16 16:27:24.199828"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Michael"], ["surname", "Plane"], ["created_at", "2020-06-16 16:27:24.200654"], ["updated_at", "2020-06-16 16:27:24.200654"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Janet"], ["surname", "Board"], ["created_at", "2020-06-16 16:27:24.201411"], ["updated_at", "2020-06-16 16:27:24.201411"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Sarah"], ["surname", "Desert"], ["created_at", "2020-06-16 16:27:24.202172"], ["updated_at", "2020-06-16 16:27:24.202172"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Curtains for u"], ["details", "Fabric Shop"], ["created_at", "2020-06-16 16:27:24.202915"], ["updated_at", "2020-06-16 16:27:24.202915"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "David"], ["surname", "Suede"], ["created_at", "2020-06-16 16:27:24.203787"], ["updated_at", "2020-06-16 16:27:24.203787"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Jess"], ["surname", "Blinds"], ["created_at", "2020-06-16 16:27:24.204966"], ["updated_at", "2020-06-16 16:27:24.204966"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Fabian"], ["surname", "Shades"], ["created_at", "2020-06-16 16:27:24.206313"], ["updated_at", "2020-06-16 16:27:24.206313"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/companies" for 127.0.0.1 at 2020-06-16 17:27:24 +0100
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.erb within layouts/application
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  Rendered companies/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 5274)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.2ms | Allocations: 10706)
+Started GET "/companies/4/employees" for 127.0.0.1 at 2020-06-16 17:27:24 +0100
+Processing by EmployeesController#index as HTML
+  Parameters: {"company_id"=>"4"}
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."company_id" = ?[0m  [["company_id", 4]]
+  Rendered employees/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2140)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 12.9ms | ActiveRecord: 0.5ms | Allocations: 10299)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.2ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mickeys Plaice"], ["details", "Fish Shop"], ["created_at", "2020-06-16 16:27:24.466619"], ["updated_at", "2020-06-16 16:27:24.466619"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Goofy"], ["surname", "Cartoon"], ["created_at", "2020-06-16 16:27:24.468034"], ["updated_at", "2020-06-16 16:27:24.468034"], ["company_id", 45]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Minnie"], ["surname", "Mouse"], ["created_at", "2020-06-16 16:27:24.469253"], ["updated_at", "2020-06-16 16:27:24.469253"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Donald"], ["surname", "Duck"], ["created_at", "2020-06-16 16:27:24.470227"], ["updated_at", "2020-06-16 16:27:24.470227"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Daffy"], ["surname", "Duck"], ["created_at", "2020-06-16 16:27:24.471136"], ["updated_at", "2020-06-16 16:27:24.471136"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Alans Autos"], ["details", "Garage"], ["created_at", "2020-06-16 16:27:24.471983"], ["updated_at", "2020-06-16 16:27:24.471983"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Dave"], ["surname", "Grease"], ["created_at", "2020-06-16 16:27:24.472979"], ["updated_at", "2020-06-16 16:27:24.472979"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Bob"], ["surname", "Spanner"], ["created_at", "2020-06-16 16:27:24.473873"], ["updated_at", "2020-06-16 16:27:24.473873"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "John"], ["surname", "Wrench"], ["created_at", "2020-06-16 16:27:24.474718"], ["updated_at", "2020-06-16 16:27:24.474718"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Gatwick"], ["details", "Airport"], ["created_at", "2020-06-16 16:27:24.475481"], ["updated_at", "2020-06-16 16:27:24.475481"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Michael"], ["surname", "Plane"], ["created_at", "2020-06-16 16:27:24.476345"], ["updated_at", "2020-06-16 16:27:24.476345"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Janet"], ["surname", "Board"], ["created_at", "2020-06-16 16:27:24.477558"], ["updated_at", "2020-06-16 16:27:24.477558"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Sarah"], ["surname", "Desert"], ["created_at", "2020-06-16 16:27:24.478863"], ["updated_at", "2020-06-16 16:27:24.478863"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Curtains for u"], ["details", "Fabric Shop"], ["created_at", "2020-06-16 16:27:24.479875"], ["updated_at", "2020-06-16 16:27:24.479875"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "David"], ["surname", "Suede"], ["created_at", "2020-06-16 16:27:24.480845"], ["updated_at", "2020-06-16 16:27:24.480845"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Jess"], ["surname", "Blinds"], ["created_at", "2020-06-16 16:27:24.481772"], ["updated_at", "2020-06-16 16:27:24.481772"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Fabian"], ["surname", "Shades"], ["created_at", "2020-06-16 16:27:24.482548"], ["updated_at", "2020-06-16 16:27:24.482548"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/companies/3/employees" for 127.0.0.1 at 2020-06-16 17:27:24 +0100
+Processing by EmployeesController#index as HTML
+  Parameters: {"company_id"=>"3"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."company_id" = ?[0m  [["company_id", 3]]
+  Rendered employees/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 999)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.1ms | Allocations: 6558)
+Started GET "/companies/3/employees/9/edit" for 127.0.0.1 at 2020-06-16 17:27:24 +0100
+Processing by EmployeesController#edit as HTML
+  Parameters: {"company_id"=>"3", "id"=>"9"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering employees/edit.html.erb within layouts/application
+  Rendered employees/edit.html.erb within layouts/application (Duration: 11.9ms | Allocations: 3211)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 23.6ms | ActiveRecord: 0.3ms | Allocations: 9510)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.2ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mickeys Plaice"], ["details", "Fish Shop"], ["created_at", "2020-06-16 16:33:02.955418"], ["updated_at", "2020-06-16 16:33:02.955418"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Goofy"], ["surname", "Cartoon"], ["created_at", "2020-06-16 16:33:02.963671"], ["updated_at", "2020-06-16 16:33:02.963671"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Minnie"], ["surname", "Mouse"], ["created_at", "2020-06-16 16:33:02.965171"], ["updated_at", "2020-06-16 16:33:02.965171"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Donald"], ["surname", "Duck"], ["created_at", "2020-06-16 16:33:02.966082"], ["updated_at", "2020-06-16 16:33:02.966082"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Daffy"], ["surname", "Duck"], ["created_at", "2020-06-16 16:33:02.966836"], ["updated_at", "2020-06-16 16:33:02.966836"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Alans Autos"], ["details", "Garage"], ["created_at", "2020-06-16 16:33:02.967567"], ["updated_at", "2020-06-16 16:33:02.967567"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Dave"], ["surname", "Grease"], ["created_at", "2020-06-16 16:33:02.968460"], ["updated_at", "2020-06-16 16:33:02.968460"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Bob"], ["surname", "Spanner"], ["created_at", "2020-06-16 16:33:02.969207"], ["updated_at", "2020-06-16 16:33:02.969207"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "John"], ["surname", "Wrench"], ["created_at", "2020-06-16 16:33:02.969962"], ["updated_at", "2020-06-16 16:33:02.969962"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Gatwick"], ["details", "Airport"], ["created_at", "2020-06-16 16:33:02.970687"], ["updated_at", "2020-06-16 16:33:02.970687"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Michael"], ["surname", "Plane"], ["created_at", "2020-06-16 16:33:02.971441"], ["updated_at", "2020-06-16 16:33:02.971441"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Janet"], ["surname", "Board"], ["created_at", "2020-06-16 16:33:02.972184"], ["updated_at", "2020-06-16 16:33:02.972184"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Sarah"], ["surname", "Desert"], ["created_at", "2020-06-16 16:33:02.972941"], ["updated_at", "2020-06-16 16:33:02.972941"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Curtains for u"], ["details", "Fabric Shop"], ["created_at", "2020-06-16 16:33:02.973673"], ["updated_at", "2020-06-16 16:33:02.973673"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "David"], ["surname", "Suede"], ["created_at", "2020-06-16 16:33:02.974420"], ["updated_at", "2020-06-16 16:33:02.974420"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Jess"], ["surname", "Blinds"], ["created_at", "2020-06-16 16:33:02.975183"], ["updated_at", "2020-06-16 16:33:02.975183"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Fabian"], ["surname", "Shades"], ["created_at", "2020-06-16 16:33:02.975922"], ["updated_at", "2020-06-16 16:33:02.975922"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2020-06-16 17:33:04 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 337)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1668ms (Views: 1662.0ms | ActiveRecord: 0.0ms | Allocations: 32859)
+Started GET "/assets/application-e745433e8684ce47398cd095c23a396a1efcf43bae68d64b6ed14ef580e83de4.css" for 127.0.0.1 at 2020-06-16 17:33:06 +0100
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.2ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mickeys Plaice"], ["details", "Fish Shop"], ["created_at", "2020-06-16 16:33:06.983374"], ["updated_at", "2020-06-16 16:33:06.983374"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Goofy"], ["surname", "Cartoon"], ["created_at", "2020-06-16 16:33:06.984940"], ["updated_at", "2020-06-16 16:33:06.984940"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Minnie"], ["surname", "Mouse"], ["created_at", "2020-06-16 16:33:06.985940"], ["updated_at", "2020-06-16 16:33:06.985940"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Donald"], ["surname", "Duck"], ["created_at", "2020-06-16 16:33:06.986829"], ["updated_at", "2020-06-16 16:33:06.986829"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Daffy"], ["surname", "Duck"], ["created_at", "2020-06-16 16:33:06.987692"], ["updated_at", "2020-06-16 16:33:06.987692"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Alans Autos"], ["details", "Garage"], ["created_at", "2020-06-16 16:33:06.988483"], ["updated_at", "2020-06-16 16:33:06.988483"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Dave"], ["surname", "Grease"], ["created_at", "2020-06-16 16:33:06.989354"], ["updated_at", "2020-06-16 16:33:06.989354"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Bob"], ["surname", "Spanner"], ["created_at", "2020-06-16 16:33:06.990203"], ["updated_at", "2020-06-16 16:33:06.990203"], ["company_id", 46]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "John"], ["surname", "Wrench"], ["created_at", "2020-06-16 16:33:06.991026"], ["updated_at", "2020-06-16 16:33:06.991026"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Gatwick"], ["details", "Airport"], ["created_at", "2020-06-16 16:33:06.991765"], ["updated_at", "2020-06-16 16:33:06.991765"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Michael"], ["surname", "Plane"], ["created_at", "2020-06-16 16:33:06.992629"], ["updated_at", "2020-06-16 16:33:06.992629"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Janet"], ["surname", "Board"], ["created_at", "2020-06-16 16:33:06.993528"], ["updated_at", "2020-06-16 16:33:06.993528"], ["company_id", 47]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Sarah"], ["surname", "Desert"], ["created_at", "2020-06-16 16:33:06.994430"], ["updated_at", "2020-06-16 16:33:06.994430"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Curtains for u"], ["details", "Fabric Shop"], ["created_at", "2020-06-16 16:33:06.995637"], ["updated_at", "2020-06-16 16:33:06.995637"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "David"], ["surname", "Suede"], ["created_at", "2020-06-16 16:33:06.996742"], ["updated_at", "2020-06-16 16:33:06.996742"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Jess"], ["surname", "Blinds"], ["created_at", "2020-06-16 16:33:06.997760"], ["updated_at", "2020-06-16 16:33:06.997760"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Fabian"], ["surname", "Shades"], ["created_at", "2020-06-16 16:33:06.998675"], ["updated_at", "2020-06-16 16:33:06.998675"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/companies" for 127.0.0.1 at 2020-06-16 17:33:07 +0100
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.erb within layouts/application
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  Rendered companies/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 5583)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.3ms | Allocations: 11591)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.3ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mickeys Plaice"], ["details", "Fish Shop"], ["created_at", "2020-06-16 16:33:07.319017"], ["updated_at", "2020-06-16 16:33:07.319017"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Goofy"], ["surname", "Cartoon"], ["created_at", "2020-06-16 16:33:07.321315"], ["updated_at", "2020-06-16 16:33:07.321315"], ["company_id", 45]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Minnie"], ["surname", "Mouse"], ["created_at", "2020-06-16 16:33:07.323054"], ["updated_at", "2020-06-16 16:33:07.323054"], ["company_id", 45]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Donald"], ["surname", "Duck"], ["created_at", "2020-06-16 16:33:07.324423"], ["updated_at", "2020-06-16 16:33:07.324423"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Daffy"], ["surname", "Duck"], ["created_at", "2020-06-16 16:33:07.325281"], ["updated_at", "2020-06-16 16:33:07.325281"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Alans Autos"], ["details", "Garage"], ["created_at", "2020-06-16 16:33:07.326111"], ["updated_at", "2020-06-16 16:33:07.326111"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Dave"], ["surname", "Grease"], ["created_at", "2020-06-16 16:33:07.326969"], ["updated_at", "2020-06-16 16:33:07.326969"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Bob"], ["surname", "Spanner"], ["created_at", "2020-06-16 16:33:07.327831"], ["updated_at", "2020-06-16 16:33:07.327831"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "John"], ["surname", "Wrench"], ["created_at", "2020-06-16 16:33:07.328616"], ["updated_at", "2020-06-16 16:33:07.328616"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Gatwick"], ["details", "Airport"], ["created_at", "2020-06-16 16:33:07.329363"], ["updated_at", "2020-06-16 16:33:07.329363"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Michael"], ["surname", "Plane"], ["created_at", "2020-06-16 16:33:07.330201"], ["updated_at", "2020-06-16 16:33:07.330201"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Janet"], ["surname", "Board"], ["created_at", "2020-06-16 16:33:07.331030"], ["updated_at", "2020-06-16 16:33:07.331030"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Sarah"], ["surname", "Desert"], ["created_at", "2020-06-16 16:33:07.331894"], ["updated_at", "2020-06-16 16:33:07.331894"], ["company_id", 47]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Curtains for u"], ["details", "Fabric Shop"], ["created_at", "2020-06-16 16:33:07.333314"], ["updated_at", "2020-06-16 16:33:07.333314"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "David"], ["surname", "Suede"], ["created_at", "2020-06-16 16:33:07.334661"], ["updated_at", "2020-06-16 16:33:07.334661"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Jess"], ["surname", "Blinds"], ["created_at", "2020-06-16 16:33:07.335741"], ["updated_at", "2020-06-16 16:33:07.335741"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Fabian"], ["surname", "Shades"], ["created_at", "2020-06-16 16:33:07.336693"], ["updated_at", "2020-06-16 16:33:07.336693"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/companies" for 127.0.0.1 at 2020-06-16 17:33:07 +0100
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.erb within layouts/application
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  Rendered companies/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 5274)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.3ms | Allocations: 10706)
+Started GET "/companies/4/employees" for 127.0.0.1 at 2020-06-16 17:33:07 +0100
+Processing by EmployeesController#index as HTML
+  Parameters: {"company_id"=>"4"}
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."company_id" = ?[0m  [["company_id", 4]]
+  Rendered employees/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2140)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 13.2ms | ActiveRecord: 0.4ms | Allocations: 10299)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.2ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mickeys Plaice"], ["details", "Fish Shop"], ["created_at", "2020-06-16 16:33:07.699517"], ["updated_at", "2020-06-16 16:33:07.699517"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Goofy"], ["surname", "Cartoon"], ["created_at", "2020-06-16 16:33:07.700937"], ["updated_at", "2020-06-16 16:33:07.700937"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Minnie"], ["surname", "Mouse"], ["created_at", "2020-06-16 16:33:07.701953"], ["updated_at", "2020-06-16 16:33:07.701953"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Donald"], ["surname", "Duck"], ["created_at", "2020-06-16 16:33:07.703005"], ["updated_at", "2020-06-16 16:33:07.703005"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Daffy"], ["surname", "Duck"], ["created_at", "2020-06-16 16:33:07.704063"], ["updated_at", "2020-06-16 16:33:07.704063"], ["company_id", 45]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.2ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Alans Autos"], ["details", "Garage"], ["created_at", "2020-06-16 16:33:07.705051"], ["updated_at", "2020-06-16 16:33:07.705051"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Dave"], ["surname", "Grease"], ["created_at", "2020-06-16 16:33:07.706135"], ["updated_at", "2020-06-16 16:33:07.706135"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Bob"], ["surname", "Spanner"], ["created_at", "2020-06-16 16:33:07.707150"], ["updated_at", "2020-06-16 16:33:07.707150"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "John"], ["surname", "Wrench"], ["created_at", "2020-06-16 16:33:07.708142"], ["updated_at", "2020-06-16 16:33:07.708142"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Gatwick"], ["details", "Airport"], ["created_at", "2020-06-16 16:33:07.709111"], ["updated_at", "2020-06-16 16:33:07.709111"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Michael"], ["surname", "Plane"], ["created_at", "2020-06-16 16:33:07.710203"], ["updated_at", "2020-06-16 16:33:07.710203"], ["company_id", 47]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Janet"], ["surname", "Board"], ["created_at", "2020-06-16 16:33:07.711447"], ["updated_at", "2020-06-16 16:33:07.711447"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Sarah"], ["surname", "Desert"], ["created_at", "2020-06-16 16:33:07.712590"], ["updated_at", "2020-06-16 16:33:07.712590"], ["company_id", 47]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Curtains for u"], ["details", "Fabric Shop"], ["created_at", "2020-06-16 16:33:07.713962"], ["updated_at", "2020-06-16 16:33:07.713962"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "David"], ["surname", "Suede"], ["created_at", "2020-06-16 16:33:07.714981"], ["updated_at", "2020-06-16 16:33:07.714981"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Jess"], ["surname", "Blinds"], ["created_at", "2020-06-16 16:33:07.715948"], ["updated_at", "2020-06-16 16:33:07.715948"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Fabian"], ["surname", "Shades"], ["created_at", "2020-06-16 16:33:07.716735"], ["updated_at", "2020-06-16 16:33:07.716735"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/companies/3/employees" for 127.0.0.1 at 2020-06-16 17:33:07 +0100
+Processing by EmployeesController#index as HTML
+  Parameters: {"company_id"=>"3"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."company_id" = ?[0m  [["company_id", 3]]
+  Rendered employees/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 999)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.1ms | Allocations: 6653)
+Started GET "/companies/3/employees/9/edit" for 127.0.0.1 at 2020-06-16 17:33:07 +0100
+Processing by EmployeesController#edit as HTML
+  Parameters: {"company_id"=>"3", "id"=>"9"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering employees/edit.html.erb within layouts/application
+  Rendered employees/edit.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2091)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.2ms | Allocations: 9188)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.2ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mickeys Plaice"], ["details", "Fish Shop"], ["created_at", "2020-06-16 16:33:26.920575"], ["updated_at", "2020-06-16 16:33:26.920575"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Goofy"], ["surname", "Cartoon"], ["created_at", "2020-06-16 16:33:26.930196"], ["updated_at", "2020-06-16 16:33:26.930196"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Minnie"], ["surname", "Mouse"], ["created_at", "2020-06-16 16:33:26.931406"], ["updated_at", "2020-06-16 16:33:26.931406"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Donald"], ["surname", "Duck"], ["created_at", "2020-06-16 16:33:26.932189"], ["updated_at", "2020-06-16 16:33:26.932189"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Daffy"], ["surname", "Duck"], ["created_at", "2020-06-16 16:33:26.932949"], ["updated_at", "2020-06-16 16:33:26.932949"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Alans Autos"], ["details", "Garage"], ["created_at", "2020-06-16 16:33:26.933652"], ["updated_at", "2020-06-16 16:33:26.933652"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Dave"], ["surname", "Grease"], ["created_at", "2020-06-16 16:33:26.934397"], ["updated_at", "2020-06-16 16:33:26.934397"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Bob"], ["surname", "Spanner"], ["created_at", "2020-06-16 16:33:26.935109"], ["updated_at", "2020-06-16 16:33:26.935109"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "John"], ["surname", "Wrench"], ["created_at", "2020-06-16 16:33:26.935842"], ["updated_at", "2020-06-16 16:33:26.935842"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Gatwick"], ["details", "Airport"], ["created_at", "2020-06-16 16:33:26.936535"], ["updated_at", "2020-06-16 16:33:26.936535"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Michael"], ["surname", "Plane"], ["created_at", "2020-06-16 16:33:26.937268"], ["updated_at", "2020-06-16 16:33:26.937268"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Janet"], ["surname", "Board"], ["created_at", "2020-06-16 16:33:26.938004"], ["updated_at", "2020-06-16 16:33:26.938004"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Sarah"], ["surname", "Desert"], ["created_at", "2020-06-16 16:33:26.938716"], ["updated_at", "2020-06-16 16:33:26.938716"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Curtains for u"], ["details", "Fabric Shop"], ["created_at", "2020-06-16 16:33:26.939405"], ["updated_at", "2020-06-16 16:33:26.939405"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "David"], ["surname", "Suede"], ["created_at", "2020-06-16 16:33:26.940148"], ["updated_at", "2020-06-16 16:33:26.940148"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Jess"], ["surname", "Blinds"], ["created_at", "2020-06-16 16:33:26.940883"], ["updated_at", "2020-06-16 16:33:26.940883"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Fabian"], ["surname", "Shades"], ["created_at", "2020-06-16 16:33:26.941596"], ["updated_at", "2020-06-16 16:33:26.941596"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2020-06-16 17:33:28 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 337)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1682ms (Views: 1675.6ms | ActiveRecord: 0.0ms | Allocations: 32925)
+Started GET "/assets/application-e745433e8684ce47398cd095c23a396a1efcf43bae68d64b6ed14ef580e83de4.css" for 127.0.0.1 at 2020-06-16 17:33:30 +0100
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.2ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mickeys Plaice"], ["details", "Fish Shop"], ["created_at", "2020-06-16 16:33:30.334510"], ["updated_at", "2020-06-16 16:33:30.334510"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Goofy"], ["surname", "Cartoon"], ["created_at", "2020-06-16 16:33:30.335945"], ["updated_at", "2020-06-16 16:33:30.335945"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Minnie"], ["surname", "Mouse"], ["created_at", "2020-06-16 16:33:30.336942"], ["updated_at", "2020-06-16 16:33:30.336942"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Donald"], ["surname", "Duck"], ["created_at", "2020-06-16 16:33:30.337821"], ["updated_at", "2020-06-16 16:33:30.337821"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Daffy"], ["surname", "Duck"], ["created_at", "2020-06-16 16:33:30.338669"], ["updated_at", "2020-06-16 16:33:30.338669"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Alans Autos"], ["details", "Garage"], ["created_at", "2020-06-16 16:33:30.339451"], ["updated_at", "2020-06-16 16:33:30.339451"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Dave"], ["surname", "Grease"], ["created_at", "2020-06-16 16:33:30.340346"], ["updated_at", "2020-06-16 16:33:30.340346"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Bob"], ["surname", "Spanner"], ["created_at", "2020-06-16 16:33:30.341146"], ["updated_at", "2020-06-16 16:33:30.341146"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "John"], ["surname", "Wrench"], ["created_at", "2020-06-16 16:33:30.342028"], ["updated_at", "2020-06-16 16:33:30.342028"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Gatwick"], ["details", "Airport"], ["created_at", "2020-06-16 16:33:30.342771"], ["updated_at", "2020-06-16 16:33:30.342771"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Michael"], ["surname", "Plane"], ["created_at", "2020-06-16 16:33:30.343668"], ["updated_at", "2020-06-16 16:33:30.343668"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Janet"], ["surname", "Board"], ["created_at", "2020-06-16 16:33:30.344550"], ["updated_at", "2020-06-16 16:33:30.344550"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Sarah"], ["surname", "Desert"], ["created_at", "2020-06-16 16:33:30.345501"], ["updated_at", "2020-06-16 16:33:30.345501"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Curtains for u"], ["details", "Fabric Shop"], ["created_at", "2020-06-16 16:33:30.346612"], ["updated_at", "2020-06-16 16:33:30.346612"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "David"], ["surname", "Suede"], ["created_at", "2020-06-16 16:33:30.347575"], ["updated_at", "2020-06-16 16:33:30.347575"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Jess"], ["surname", "Blinds"], ["created_at", "2020-06-16 16:33:30.348560"], ["updated_at", "2020-06-16 16:33:30.348560"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Fabian"], ["surname", "Shades"], ["created_at", "2020-06-16 16:33:30.349399"], ["updated_at", "2020-06-16 16:33:30.349399"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/companies" for 127.0.0.1 at 2020-06-16 17:33:30 +0100
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.erb within layouts/application
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  Rendered companies/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 5583)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.3ms | Allocations: 11591)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.2ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mickeys Plaice"], ["details", "Fish Shop"], ["created_at", "2020-06-16 16:33:30.710076"], ["updated_at", "2020-06-16 16:33:30.710076"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Goofy"], ["surname", "Cartoon"], ["created_at", "2020-06-16 16:33:30.711424"], ["updated_at", "2020-06-16 16:33:30.711424"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Minnie"], ["surname", "Mouse"], ["created_at", "2020-06-16 16:33:30.712411"], ["updated_at", "2020-06-16 16:33:30.712411"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Donald"], ["surname", "Duck"], ["created_at", "2020-06-16 16:33:30.713361"], ["updated_at", "2020-06-16 16:33:30.713361"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Daffy"], ["surname", "Duck"], ["created_at", "2020-06-16 16:33:30.714222"], ["updated_at", "2020-06-16 16:33:30.714222"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Alans Autos"], ["details", "Garage"], ["created_at", "2020-06-16 16:33:30.714994"], ["updated_at", "2020-06-16 16:33:30.714994"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Dave"], ["surname", "Grease"], ["created_at", "2020-06-16 16:33:30.715916"], ["updated_at", "2020-06-16 16:33:30.715916"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Bob"], ["surname", "Spanner"], ["created_at", "2020-06-16 16:33:30.716748"], ["updated_at", "2020-06-16 16:33:30.716748"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "John"], ["surname", "Wrench"], ["created_at", "2020-06-16 16:33:30.717526"], ["updated_at", "2020-06-16 16:33:30.717526"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Gatwick"], ["details", "Airport"], ["created_at", "2020-06-16 16:33:30.718344"], ["updated_at", "2020-06-16 16:33:30.718344"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Michael"], ["surname", "Plane"], ["created_at", "2020-06-16 16:33:30.719225"], ["updated_at", "2020-06-16 16:33:30.719225"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Janet"], ["surname", "Board"], ["created_at", "2020-06-16 16:33:30.720067"], ["updated_at", "2020-06-16 16:33:30.720067"], ["company_id", 47]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Sarah"], ["surname", "Desert"], ["created_at", "2020-06-16 16:33:30.721414"], ["updated_at", "2020-06-16 16:33:30.721414"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Curtains for u"], ["details", "Fabric Shop"], ["created_at", "2020-06-16 16:33:30.722553"], ["updated_at", "2020-06-16 16:33:30.722553"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "David"], ["surname", "Suede"], ["created_at", "2020-06-16 16:33:30.723516"], ["updated_at", "2020-06-16 16:33:30.723516"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Jess"], ["surname", "Blinds"], ["created_at", "2020-06-16 16:33:30.724830"], ["updated_at", "2020-06-16 16:33:30.724830"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Fabian"], ["surname", "Shades"], ["created_at", "2020-06-16 16:33:30.725683"], ["updated_at", "2020-06-16 16:33:30.725683"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/companies" for 127.0.0.1 at 2020-06-16 17:33:30 +0100
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.erb within layouts/application
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  Rendered companies/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 5274)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.2ms | Allocations: 10706)
+Started GET "/companies/4/employees" for 127.0.0.1 at 2020-06-16 17:33:30 +0100
+Processing by EmployeesController#index as HTML
+  Parameters: {"company_id"=>"4"}
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."company_id" = ?[0m  [["company_id", 4]]
+  Rendered employees/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2140)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 0.3ms | Allocations: 10299)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.2ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mickeys Plaice"], ["details", "Fish Shop"], ["created_at", "2020-06-16 16:33:31.077245"], ["updated_at", "2020-06-16 16:33:31.077245"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Goofy"], ["surname", "Cartoon"], ["created_at", "2020-06-16 16:33:31.078557"], ["updated_at", "2020-06-16 16:33:31.078557"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Minnie"], ["surname", "Mouse"], ["created_at", "2020-06-16 16:33:31.079602"], ["updated_at", "2020-06-16 16:33:31.079602"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Donald"], ["surname", "Duck"], ["created_at", "2020-06-16 16:33:31.080556"], ["updated_at", "2020-06-16 16:33:31.080556"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Daffy"], ["surname", "Duck"], ["created_at", "2020-06-16 16:33:31.081429"], ["updated_at", "2020-06-16 16:33:31.081429"], ["company_id", 45]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Alans Autos"], ["details", "Garage"], ["created_at", "2020-06-16 16:33:31.082241"], ["updated_at", "2020-06-16 16:33:31.082241"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Dave"], ["surname", "Grease"], ["created_at", "2020-06-16 16:33:31.083179"], ["updated_at", "2020-06-16 16:33:31.083179"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Bob"], ["surname", "Spanner"], ["created_at", "2020-06-16 16:33:31.084051"], ["updated_at", "2020-06-16 16:33:31.084051"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "John"], ["surname", "Wrench"], ["created_at", "2020-06-16 16:33:31.084901"], ["updated_at", "2020-06-16 16:33:31.084901"], ["company_id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Gatwick"], ["details", "Airport"], ["created_at", "2020-06-16 16:33:31.085690"], ["updated_at", "2020-06-16 16:33:31.085690"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Michael"], ["surname", "Plane"], ["created_at", "2020-06-16 16:33:31.086570"], ["updated_at", "2020-06-16 16:33:31.086570"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Janet"], ["surname", "Board"], ["created_at", "2020-06-16 16:33:31.087496"], ["updated_at", "2020-06-16 16:33:31.087496"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Sarah"], ["surname", "Desert"], ["created_at", "2020-06-16 16:33:31.088378"], ["updated_at", "2020-06-16 16:33:31.088378"], ["company_id", 47]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Create (0.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Curtains for u"], ["details", "Fabric Shop"], ["created_at", "2020-06-16 16:33:31.089392"], ["updated_at", "2020-06-16 16:33:31.089392"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "David"], ["surname", "Suede"], ["created_at", "2020-06-16 16:33:31.090399"], ["updated_at", "2020-06-16 16:33:31.090399"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Jess"], ["surname", "Blinds"], ["created_at", "2020-06-16 16:33:31.091344"], ["updated_at", "2020-06-16 16:33:31.091344"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("forename", "surname", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?)[0m  [["forename", "Fabian"], ["surname", "Shades"], ["created_at", "2020-06-16 16:33:31.092249"], ["updated_at", "2020-06-16 16:33:31.092249"], ["company_id", 48]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/companies/3/employees" for 127.0.0.1 at 2020-06-16 17:33:31 +0100
+Processing by EmployeesController#index as HTML
+  Parameters: {"company_id"=>"3"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."company_id" = ?[0m  [["company_id", 3]]
+  Rendered employees/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 999)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.2ms | Allocations: 6653)
+Started GET "/companies/3/employees/9/edit" for 127.0.0.1 at 2020-06-16 17:33:31 +0100
+Processing by EmployeesController#edit as HTML
+  Parameters: {"company_id"=>"3", "id"=>"9"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering employees/edit.html.erb within layouts/application
+  Rendered employees/edit.html.erb within layouts/application (Duration: 4.4ms | Allocations: 3221)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 12.0ms | ActiveRecord: 0.4ms | Allocations: 9190)
+Started PUT "/companies/3/employees/9" for 127.0.0.1 at 2020-06-16 17:33:31 +0100
+Processing by EmployeesController#update as HTML
+  Parameters: {"forename"=>"Janet", "surname"=>"Pugwash", "company_id"=>"3", "id"=>"9"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEmployee Update (0.2ms)[0m  [1m[33mUPDATE "employees" SET "surname" = ?, "updated_at" = ? WHERE "employees"."id" = ?[0m  [["surname", "Pugwash"], ["updated_at", "2020-06-16 16:33:31.378555"], ["id", 9]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1:40883/companies/3/employees
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms | Allocations: 1357)
+Started GET "/companies/3/employees" for 127.0.0.1 at 2020-06-16 17:33:31 +0100
+Processing by EmployeesController#index as HTML
+  Parameters: {"company_id"=>"3"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."company_id" = ?[0m  [["company_id", 3]]
+  Rendered employees/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1006)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.2ms | Allocations: 6571)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m

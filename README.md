@@ -105,4 +105,4 @@ Clearly the field labelled `Surname` is actually the `Middlename` field, and the
 
 ## Conclusion
 
-These actions dealt with all three bugs. My last action was in the name of human readability.
+These actions dealt with all three bugs. My last action was in the name of human readability: without this change, `/companies/[n]/employees`, the company name is only shown alongside each employee. Therefore a newly created company would not display the company name, which users may find offputting.

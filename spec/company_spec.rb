@@ -20,4 +20,12 @@ describe 'Listing Employees', type: :system do
     find("a[href='#{'/companies/4/employees'}']").click
     expect(page).to have_content('Fabian')
   end
+
+  it 'stores and displays employee edits correctly' do
+    visit ('companies/3/employees')
+    find("a[href='#{'/companies/3/employees/9/edit'}']").click
+    fill_in('Surname', with: 'Pugwash')
+    click_button('Save')
+    expect(page).to have_content('Pugwash')
+  end
 end
