@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe 'Company details', type: :system do
-  it 'lists correct employees' do
+describe 'Welcome Screen', type: :system do
+  it 'greets the visitor' do
     visit ('/')
     expect(page).to have_content('Welcome to the app')
   end
