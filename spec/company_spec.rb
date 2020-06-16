@@ -17,7 +17,7 @@ end
 describe 'Listing Employees', type: :system do
   it 'displays the correct company details' do
     visit ('/companies')
-    find("a[href='#{'/companies/4/employees'}']").click
+    find("a[href='/companies/4/employees']").click
     expect(page).to have_content('Fabian')
   end
 
@@ -27,6 +27,14 @@ describe 'Listing Employees', type: :system do
     fill_in('Surname', with: 'Pugwash')
     click_button('Save')
     expect(page).to have_content('Pugwash')
+  end
+
+  it 'saves and displays a new employee' do
+    visit ('companies/2/employees/new')
+    fill_in('Forename', with: 'Gomez')
+    fill_in('Surname', with: 'Addams')
+    click_button('Save')
+    expect(page).to have_content('Gomez Addams')
   end
 end
 
