@@ -116,7 +116,11 @@ Clearly the field labelled `Surname` is actually the `Middlename` field, and the
 
 * Remove `/companies/[n]` pages.
 
-<br>These actions will circumvent the first two bugs.<br>
+<br>
+
+These actions will circumvent the first two bugs.
+
+<br>
 
 * Remove current `Surname` field on `/companies/[n]/employees/new` and rename `Middlename` field to `Surname`. Investigate database setup and amend columns if necessary.
 
