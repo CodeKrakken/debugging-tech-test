@@ -1,9 +1,13 @@
 # Customer Service Support Technician Tech Test
 Test for CS Support candidates
 
+<br>
+
 ## Process
 
 First of all I walked through the program in the browser, putting myself in the user's shoes. I methodically checked all links and noted URLs, constructing a sitemap as I went. As the three bugs are as yet undefined, I have listed their effects as separate issues.
+
+<br>
 
 ## Issue 1
 
@@ -13,17 +17,19 @@ This suggests a database issue. I suspect that `/companies/[n]` is hardcoded to 
 <br>
 This issue also affects company creation on `/companies/new`. It saves the new company details correctly but the new `/companies/[n]` page inherits the issue.
 
+<br>
+
 ## Issue 2
 
-Also on `/companies/[n]`, `Add employee` routes you to `/companies/1/employees/new`, regardless of which company you are viewing. It is possible that this defaulting to Company 1 is related to Issue 1. 
+Still on `/companies/[n]`, `Add employee` routes you to `/companies/1/employees/new`, regardless of which company you are viewing. It is possible that this defaulting to Company 1 is related to Issue 1. 
 
-<br><br>
+<br>
 
 ## Issue 3
 
 Advancing along this branch of the program, I check the `Edit` link for each employee of Company 1. It always takes me to Employee 1's details. The URLs are as follows:
 
-<br><br>
+<br>
 
 ```
 /companies/1/employees/1/edit<br>
@@ -31,11 +37,11 @@ Advancing along this branch of the program, I check the `Edit` link for each emp
 /companies/3/employees/1/edit<br>
 /companies/4/employees/1/edit```
 
-<br><br>
+<br>
 
 Since they are all from Company 1, it would be logical to set the links thus:
 
-<br><br>
+<br>
 
 ```
 /companies/1/employees/1/edit<br>
@@ -43,11 +49,11 @@ Since they are all from Company 1, it would be logical to set the links thus:
 /companies/1/employees/3/edit<br>
 /companies/1/employees/4/edit```
 
-<br><br>
+<br>
 
 A quick check of Company 2's `edit` links yields the following URLs:
 
-<br><br>
+<br>
 
 ```
 /companies/1/employees/2/edit<br>
@@ -55,7 +61,7 @@ A quick check of Company 2's `edit` links yields the following URLs:
 /companies/3/employees/2/edit<br>
 /companies/4/employees/2/edit```
 
-<br><br>
+<br>
 
 Each one displays the details for Company 1 Employee 2. This pattern follows for Companies 3 & 4, suggesting that the inrerpolation of the URLs is backwards. However, we cannot clarify until the site is pulling the correct data for each company. <br>
 
