@@ -9,7 +9,7 @@ First of all I walked through the program in the browser, putting myself in the 
 
 Clicking `Show` for any of the companies on `/companies` takes you to `/companies/[n]`. Although each button interpolates the URL with the correct company ID, the details listed are always for Company 1.
 <br>
-This suggests a database issue. I suspect that `/companies/[n]` is hardcoded to pull data from row 1 of the table. Indeed, deleting Company 1 causes the remaining pages to show Company 2's data, now found at row 1.
+This suggests a database issue. I suspect that `/companies/[n]` is hardcoded to pull data from row 1 of the table. Indeed, deleting Company 1 causes the remaining pages to show Company 2's data, now found in row 1.
 <br>
 This issue also affects company creation on `/companies/new`. It saves the new company details correctly and routes to a new `/companies/[n]` page, which obviously inherits the issue from the template.
 
