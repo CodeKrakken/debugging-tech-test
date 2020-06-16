@@ -3,7 +3,7 @@ Test for CS Support candidates
 
 ## Process
 
-First of all I walked through the program in the browser, putting myself in the user's shoes. What problem had they been having? I methodically checked all links and noted URLs, constructing a sitemap as I went. Although I am aware there are only 3 bugs to find, I have listed their effects as separate issues in the first instance.
+First of all I walked through the program in the browser, putting myself in the user's shoes. I methodically checked all links and noted URLs, constructing a sitemap as I went. Although I am aware there are only 3 bugs to find, I have listed their effects as separate issues for now.
 
 ## Issue 1
 
