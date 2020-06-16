@@ -103,6 +103,12 @@ Clearly the field labelled `Surname` is actually the `Middlename` field, and the
 
 * Changed `app/views/employees/index.html.erb line 1` from `<h2 class="pb-2">Listing Employees</h2>` to `<h2 class="pb-2">Listing Employees of <%= @company.name %></h2>`.
 
-## Conclusion
+## Summary
 
 These actions dealt with all three bugs. My last action was in the name of human readability: without this change, `/companies/[n]/employees`, the company name is only shown alongside each employee. Therefore a newly created company would not display the company name, which users may find offputting.
+
+## Testing
+
+I used RSpec and Capybara to test my bug fixes. I would ideally have set up the tests first, but with limited time I had to prioritise. To compensate for this and avoid evergreen testing, I made sure to purposefully write a failing version first, searching for content that I know not to be there.<br>
+I began with a couple of smoke tests, before focusing on the bug fixes. I am happy to report there were no major issues with testing.
+<br>
