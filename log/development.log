@@ -67,3 +67,72 @@ Processing by CompaniesController#index as HTML
 Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.1ms | Allocations: 7744)
 
 
+Started GET "/companies/4/employees" for 127.0.0.1 at 2020-06-16 17:03:53 +0100
+Processing by EmployeesController#index as HTML
+  Parameters: {"company_id"=>"4"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:53:in `find_company'
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."company_id" = ?[0m  [["company_id", 4]]
+  ↳ app/views/employees/index.html.erb:15
+  Rendered employees/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1500)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.1ms | Allocations: 8861)
+
+
+Started GET "/companies" for 127.0.0.1 at 2020-06-16 17:03:59 +0100
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.erb within layouts/application
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/companies/index.html.erb:15
+  Rendered companies/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1058)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.1ms | Allocations: 7733)
+
+
+Started GET "/companies/3/employees" for 127.0.0.1 at 2020-06-16 17:04:00 +0100
+Processing by EmployeesController#index as HTML
+  Parameters: {"company_id"=>"3"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:53:in `find_company'
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."company_id" = ?[0m  [["company_id", 3]]
+  ↳ app/views/employees/index.html.erb:15
+  Rendered employees/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1499)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.2ms | Allocations: 8829)
+
+
+Started GET "/companies" for 127.0.0.1 at 2020-06-16 17:04:07 +0100
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.erb within layouts/application
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/companies/index.html.erb:15
+  Rendered companies/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1058)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.1ms | Allocations: 7731)
+
+
+Started GET "/companies/4/employees" for 127.0.0.1 at 2020-06-16 17:04:12 +0100
+Processing by EmployeesController#index as HTML
+  Parameters: {"company_id"=>"4"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:53:in `find_company'
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."company_id" = ?[0m  [["company_id", 4]]
+  ↳ app/views/employees/index.html.erb:15
+  Rendered employees/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1499)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.1ms | Allocations: 8745)
+
+
+Started GET "/companies" for 127.0.0.1 at 2020-06-16 17:05:07 +0100
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.erb within layouts/application
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/companies/index.html.erb:15
+  Rendered companies/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1058)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.1ms | Allocations: 7823)
+
+

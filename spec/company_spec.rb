@@ -13,3 +13,11 @@ describe 'Listing Companies', type: :system do
     expect(page).to have_content('Mickeys Plaice')
   end
 end
+
+describe 'Listing Employees', type: :system do
+  it 'displays the correct company details' do
+    visit ('companies')
+    find("a[href='#{'/companies/4/employees'}']").click
+    expect(page).to have_content('Fabian')
+  end
+end
