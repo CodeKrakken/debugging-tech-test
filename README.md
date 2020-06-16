@@ -132,7 +132,11 @@ These actions will circumvent the first two bugs.
 
 ## Solutions
 
+<br>
+
 ### Bugs 1 & 2
+
+<br>
 
 * Changed `app/views/companies/index.html.erb line 21` from `<%= link_to "Show", company_path(company), class: "btn btn-primary btn-sm"%>` to `<%= link_to "Show", company_employees_path(company), class: "btn btn-primary btn-sm"%>`.
 
@@ -142,7 +146,11 @@ These actions will circumvent the first two bugs.
 
 * Deleted `app/views/companies/show.html.erb`.
 
+<br>
+
 ### Bug 3
+
+<br>
 
 * Changed `app/model/employee.rb line 5` from `validates :forename, :surname, :middlename, presence: true` to `validates :forename, :surname, presence: true`.
 
@@ -150,11 +158,19 @@ These actions will circumvent the first two bugs.
 
 * Deleted `db/migrate/20200120121725_add_middlename_to_employees_table.rb` and all `middlename` attributes from `db/seeds.rb`.
 
+<br>
+
 ### Other
+
+<br>
 
 * Changed `app/views/employees/index.html.erb line 1` from `<h2 class="pb-2">Listing Employees</h2>` to `<h2 class="pb-2">Listing Employees of <%= @company.name %></h2>`. Without this change, `/companies/[n]/employees`, a newly created company does not display the company name, which may confuse users.
 
+<br>
+
 ## Testing
+
+<br>
 
 I tested my bug fixes with RSpec and Capybara. I would have set up the tests first, but with limited time I had to prioritise. To ensure integrity and avoid evergreen testing, I first made each test fail by expecting non existent content.<br>
 I began with a couple of smoke tests, before working through the bugs. There were no major issues with testing.
