@@ -11,7 +11,7 @@ Clicking `Show` for any of the companies on `/companies` takes you to `/companie
 <br>
 This suggests a database issue. I suspect that `/companies/[n]` is hardcoded to pull data from row 1 of the table. Indeed, deleting Company 1 causes the remaining pages to show Company 2's data, now found in row 1.
 <br>
-This issue also affects company creation on `/companies/new`. It saves the new company details correctly and routes to a new `/companies/[n]` page, which obviously inherits the issue from the template.
+This issue also affects company creation on `/companies/new`. It saves the new company details correctly but the new `/companies/[n]` page inherits the issue.
 
 ## Issue 2
 
