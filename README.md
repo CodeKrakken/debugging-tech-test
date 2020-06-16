@@ -81,12 +81,20 @@ The employee `Edit` buttons have here been replaced by `Edit Employee` and `Dest
 
 Although clicking `Add Employee` on `/companies/[n]` will only take us to `/companies/1/employees/new`, `/companies/[n]/employees`'s equivalent `Create New Employee` button allows us to access each company correctly. However, clicking `Save` throws an error:
 
+<br>
+
 * Surname can't be blank<br>
+
+<br>
 
 This persists when the field is filled. I next tried with the surname blank, yielding the following result:
 
+<br>
+
 * Surname can't be blank
-* Middlename can't be blank<br>
+* Middlename can't be blank
+
+<br>
 
 Clearly the field labelled `Surname` is actually the `Middlename` field, and the real `Surname` field is not displayed, hence always blank.
 
