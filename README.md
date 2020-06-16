@@ -66,7 +66,9 @@ A quick check of Company 2's `edit` links yields the following URLs:
 
 <br>
 
-Each one displays the details for Company 1 Employee 2. This pattern follows for Companies 3 & 4, suggesting that the inrerpolation of the URLs is backwards. However, we cannot clarify until the site is pulling the correct data for each company. <br>
+Each one displays the details for Company 1 Employee 2. This follows for Companies 3 & 4 - it seems the interpolation of the URLs is backwards. Were it not for Issue 1, we would likely find each company's Employee 1s grouped together in Company 1, and so on. However, we cannot clarify until Issue 1 is resolved. 
+
+<br>
 
 ## Issue 4
 
