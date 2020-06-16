@@ -16,16 +16,26 @@ end
 
 describe 'Listing Employees', type: :system do
   it 'displays the correct company details' do
-    visit ('companies')
+    visit ('/companies')
     find("a[href='#{'/companies/4/employees'}']").click
     expect(page).to have_content('Fabian')
   end
 
   it 'stores and displays employee edits correctly' do
-    visit ('companies/3/employees')
+    visit ('/companies/3/employees')
     find("a[href='#{'/companies/3/employees/9/edit'}']").click
     fill_in('Surname', with: 'Pugwash')
     click_button('Save')
     expect(page).to have_content('Pugwash')
+  end
+end
+
+describe 'Creating a company', type: :system do
+  it 'displays the correct company upon saving' do
+    visit('/companies/new')
+    fill_in('Name', with: "Dummy's Dummies")
+    fill_in('Details', with: 'Dummies, Dummy.')
+    click_button('Save')
+    expect(page).to have_content("Dummy's Dummies")
   end
 end
