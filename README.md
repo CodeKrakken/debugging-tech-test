@@ -35,7 +35,8 @@ Advancing along this branch of the program, I check the `Edit` link for each emp
 /companies/1/employees/1/edit<br>
 /companies/2/employees/1/edit<br>
 /companies/3/employees/1/edit<br>
-/companies/4/employees/1/edit```
+/companies/4/employees/1/edit
+```
 
 <br>
 
@@ -47,7 +48,8 @@ Since they are all from Company 1, it would be logical to set the links thus:
 /companies/1/employees/1/edit<br>
 /companies/1/employees/2/edit<br>
 /companies/1/employees/3/edit<br>
-/companies/1/employees/4/edit```
+/companies/1/employees/4/edit
+```
 
 <br>
 
@@ -59,7 +61,8 @@ A quick check of Company 2's `edit` links yields the following URLs:
 /companies/1/employees/2/edit<br>
 /companies/2/employees/2/edit<br>
 /companies/3/employees/2/edit<br>
-/companies/4/employees/2/edit```
+/companies/4/employees/2/edit
+```
 
 <br>
 
