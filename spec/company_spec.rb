@@ -23,10 +23,10 @@ describe 'Listing Employees', type: :system do
 
   it 'stores and displays employee edits correctly' do
     visit ('/companies/3/employees')
-    find("a[href='#{'/companies/3/employees/9/edit'}']").click
-    fill_in('Surname', with: 'Pugwash')
+    find("a[href='/companies/3/employees/9/edit']").click
+    fill_in('Surname', with: 'Spengler')
     click_button('Save')
-    expect(page).to have_content('Pugwash')
+    expect(page).to have_content('Spengler')
   end
 
   it 'saves and displays a new employee' do
