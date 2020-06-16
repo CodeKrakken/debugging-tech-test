@@ -3,25 +3,25 @@ Test for CS Support candidates
 
 ## Process
 
-First of all I walked through the program in the browser, putting myself in the user's shoes. I methodically checked all links and noted URLs, constructing a sitemap as I went. Although I am aware there are only 3 bugs to find, I have listed their effects as separate issues for now.
+First of all I walked through the program in the browser, putting myself in the user's shoes. I methodically checked all links and noted URLs, constructing a sitemap as I went. As the three bugs are as yet undefined, I have listed their effects as separate issues.
 
 ## Issue 1
 
-The first bug I found was on `/companies/[n]`. Although each `Show` button on `/companies` takes you to the right URL, the details listed are always for Company 1.
+Clicking `Show` for any of the companies on `/companies` takes you to `/companies/[n]`. Although each button interpolates the URL with the correct company ID, the details listed are always for Company 1.
 <br>
-This suggests an issue pulling from the database. I suspect that each page of `/companies/[n]` is hardcoded to pull data from row 1 of the table. This is borne out by the effect of deleting Company 1: the remaining pages now show Company 2's data, as it has been moved up in the table to row 1.
+This suggests a database issue. I suspect that `/companies/[n]` is hardcoded to pull data from row 1 of the table. Indeed, deleting Company 1 causes the remaining pages to show Company 2's data, now found at row 1.
 <br>
 This issue also affects company creation on `/companies/new`. It saves the new company details correctly and routes to a new `/companies/[n]` page, which obviously inherits the issue from the template.
 
 ## Issue 2
 
-On every instance of `/companies/[n]`, `Add employee` routes you to `/companies/1/employees/new`. It is possible that this defaulting to Company 1 is related to Issue 1, but it could also be an unrelated syntax issue. 
+Also on `/companies/[n]`, `Add employee` routes you to `/companies/1/employees/new`, regardless of which company you are viewing. It is possible that this defaulting to Company 1 is related to Issue 1. 
 
 <br><br>
 
 ## Issue 3
 
-Advancing along this branch of the program, I check the `Edit` link for each employee of Company 1. It always takes me to Employee 1's details. It looks like the URLs are wrong - the edit links are as follows:
+Advancing along this branch of the program, I check the `Edit` link for each employee of Company 1. It always takes me to Employee 1's details. The URLs are as follows:
 
 <br><br>
 
@@ -57,22 +57,22 @@ A quick check of Company 2's `edit` links yields the following URLs:
 
 <br><br>
 
-Each one displays the details for Company 1 Employee 2. This pattern follows for Companies 3 & 4, suggesting that the cause of this issue is a syntax issue in the routing of the `Edit` buttons, specifically that the Company and Employee numbers have been switched. However, since the site is pulling row 1 data for all companies, we cannot yet clarify.<br>
+Each one displays the details for Company 1 Employee 2. This pattern follows for Companies 3 & 4, suggesting that the inrerpolation of the URLs is backwards. However, we cannot clarify until the site is pulling the correct data for each company. <br>
 
 ## Issue 4
 
-Editing employee details and clicking `Save` updates the details for the displayed employee. However it then takes us to a near duplicate of `/companies/[n]`, with `/employees` appended to each URL. This is also where we land when we click `Back to employees list`, or return from `/companies[n]/employees/new`. This duplicate, `/companies/[n]/employees` displays the wrong company's details, but this is due to the routing of `Edit` buttons on `/companies/[n]` - it is not a separate bug.<br>
-The `Edit` button for each employee has here been replaced by `Edit Employee` and `Destroy Employee` - both buttons function correctly. There is no `Back to companies list` button here but I'm not sure this can be defined as a bug so much as an oversight.
+Incorrect details notwithstanding, clicking `Save` does correctly update the displayed employee's details. However we are then taken to `/companies/[n]/employees`, a near duplicate of `/companies/[n]`. `Back to employees list` follows suit, as do `/companies[n]/employees/new`'s buttons. We see the wrong company's details, but only because of Issue 2 - it is not a separate bug.<br>
+The employee `Edit` buttons have here been replaced by `Edit Employee` and `Destroy Employee` - both buttons function correctly. There is no `Back to companies list` button here, but this is more of an oversight than a bug.
 
 <br><br>
 
 ## Issue 5
 
-Although clicking `Add Employee` on `/companies/[n]` will only take us to `/companies/1/employees/new`, the equivalent `Create New Employee` button on `/companies/[n]/employees` allows us to access `/companies/[n]/employees/new` correctly. However, completing the form and clicking `Save` throws an error:
+Although clicking `Add Employee` on `/companies/[n]` will only take us to `/companies/1/employees/new`, `/companies/[n]/employees`'s equivalent `Create New Employee` button allows us to access each company correctly. However, clicking `Save` throws an error:
 
 * Surname can't be blank<br>
 
-This persists when the field is filled. I next submitted the form with the surname blank, which yielded the following result:
+This persists when the field is filled. I next tried with the surname blank, yielding the following result:
 
 * Surname can't be blank
 * Middlename can't be blank<br>
@@ -81,14 +81,10 @@ Clearly the field labelled `Surname` is actually the `Middlename` field, and the
 
 <br><br>
 
-![site map new](https://user-images.githubusercontent.com/52076323/84813191-74428e80-b007-11ea-8bc1-deaa87755217.jpeg)
-
-<br><br>
-
 ## Bugs
 
-* `/companies/[n]` always displays details for row 1 of the database table
-* `Edit` links are incorrectly defined on `/companies/[n]`
+* `/companies/[n]` always pulls from row 1 of the database table
+* `Edit` links are incorrectly interpolated on `/companies/[n]`
 * Fields are incorrectly labelled on `/companies/[n]/employees/new`
 
 <br><br>
@@ -97,7 +93,7 @@ Clearly the field labelled `Surname` is actually the `Middlename` field, and the
 
 * On `/companies`, change `Show` button routes from `/companies/[n]` to `/companies/[n]/employees`.
 
-* On `/companies/new`, change `Save` button route from `/companies/[n]` to `/companies/[n]/employees`.
+* On `/companies/new`, change button routes from `/companies/[n]` to `/companies/[n]/employees`.
 
 * Remove `/companies/[n]` pages.
 
@@ -105,7 +101,15 @@ Clearly the field labelled `Surname` is actually the `Middlename` field, and the
 
 * Remove current `Surname` field on `/companies/[n]/employees/new` and rename `Middlename` field to `Surname`. Investigate database setup and amend columns if necessary.
 
+<br><br>
+
+![site map new](https://user-images.githubusercontent.com/52076323/84813191-74428e80-b007-11ea-8bc1-deaa87755217.jpeg)
+
+<br><br>
+
 ## Solutions
+
+### Bugs 1 & 2
 
 * Changed `app/views/companies/index.html.erb line 21` from `<%= link_to "Show", company_path(company), class: "btn btn-primary btn-sm"%>` to `<%= link_to "Show", company_employees_path(company), class: "btn btn-primary btn-sm"%>`.
 
@@ -115,24 +119,22 @@ Clearly the field labelled `Surname` is actually the `Middlename` field, and the
 
 * Deleted `app/views/companies/show.html.erb`.
 
+### Bug 3
+
 * Changed `app/model/employee.rb line 5` from `validates :forename, :surname, :middlename, presence: true` to `validates :forename, :surname, presence: true`.
 
 * Changed `app/views/employees/new.html.erb line 26` from `<%= form.text_field :middlename, class: "form-control" %>` to `<%= form.text_field :surname, class: "form-control" %>`.
 
 * Deleted `db/migrate/20200120121725_add_middlename_to_employees_table.rb` and all `middlename` attributes from `db/seeds.rb`.
 
-## Other
+### Other
 
-* Changed `app/views/employees/index.html.erb line 1` from `<h2 class="pb-2">Listing Employees</h2>` to `<h2 class="pb-2">Listing Employees of <%= @company.name %></h2>`.
-
-## Summary
-
-These actions dealt with all three bugs. My last action was in the name of human readability: without this change, `/companies/[n]/employees`, the company name is only shown alongside each employee. Therefore a newly created company would not display the company name, which users may find offputting.
+* Changed `app/views/employees/index.html.erb line 1` from `<h2 class="pb-2">Listing Employees</h2>` to `<h2 class="pb-2">Listing Employees of <%= @company.name %></h2>`. Without this change, `/companies/[n]/employees`, a newly created company does not display the company name, which may confuse users.
 
 ## Testing
 
-I used RSpec and Capybara to test my bug fixes. I would ideally have set up the tests first, but with limited time I had to prioritise. To compensate for this and avoid evergreen testing, I made sure to purposefully write a failing version first, searching for content that I know not to be there.<br>
-I began with a couple of smoke tests, before focusing on the bug fixes. I am happy to report there were no major issues with testing.
+I tested my bug fixes with RSpec and Capybara. I would have set up the tests first, but with limited time I had to prioritise. To ensure integrity and avoid evergreen testing, I first made each test fail by expecting non existent content.<br>
+I began with a couple of smoke tests, before working through the bugs. There were no major issues with testing.
 
 <br>
 
