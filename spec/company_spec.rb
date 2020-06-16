@@ -8,13 +8,8 @@ describe 'Welcome Screen', type: :system do
 end
 
 describe 'Listing Companies', type: :system do
-
-  before :each do
-    setup_company
-  end
-
   it 'displays a list of companies' do
     visit ('/companies')
-    expect(page).to have_content('Dummy Company')
+    expect(page).to have_content('Mickeys Plaice')
   end
 end
