@@ -62,6 +62,10 @@ This persists when the field is filled. I next submitted the form with the surna
 * Middlename can't be blank<br>
 
 Clearly the field labelled `Surname` is actually the `Middlename` field, and the real `Surname` field is not displayed, hence always blank.
+
+<br><br>
+![site map new](https://user-images.githubusercontent.com/52076323/84813191-74428e80-b007-11ea-8bc1-deaa87755217.jpeg)
+
 <br><br>
 
 ## Bugs
