@@ -22,32 +22,48 @@ On every instance of `/companies/[n]`, `Add employee` routes you to `/companies/
 ## Issue 3
 
 Advancing along this branch of the program, I check the `Edit` link for each employee of Company 1. It always takes me to Employee 1's details. It looks like the URLs are wrong - the edit links are as follows:
-<br><br>```
+
+<br><br>
+
+```
 /companies/1/employees/1/edit<br>
 /companies/2/employees/1/edit<br>
 /companies/3/employees/1/edit<br>
 /companies/4/employees/1/edit```
+
 <br><br>
+
 Since they are all from Company 1, it would be logical to set the links thus:
-<br><br>```
+
+<br><br>
+
+```
 /companies/1/employees/1/edit<br>
 /companies/1/employees/2/edit<br>
 /companies/1/employees/3/edit<br>
 /companies/1/employees/4/edit```
+
 <br><br>
+
 A quick check of Company 2's `edit` links yields the following URLs:
-<br><br>```
+
+<br><br>
+
+```
 /companies/1/employees/2/edit<br>
 /companies/2/employees/2/edit<br>
 /companies/3/employees/2/edit<br>
 /companies/4/employees/2/edit```
+
 <br><br>
+
 Each one displays the details for Company 1 Employee 2. This pattern follows for Companies 3 & 4, suggesting that the cause of this issue is a syntax issue in the routing of the `Edit` buttons, specifically that the Company and Employee numbers have been switched. However, since the site is pulling row 1 data for all companies, we cannot yet clarify.<br>
 
 ## Issue 4
 
 Editing employee details and clicking `Save` updates the details for the displayed employee. However it then takes us to a near duplicate of `/companies/[n]`, with `/employees` appended to each URL. This is also where we land when we click `Back to employees list`, or return from `/companies[n]/employees/new`. This duplicate, `/companies/[n]/employees` displays the wrong company's details, but this is due to the routing of `Edit` buttons on `/companies/[n]` - it is not a separate bug.<br>
 The `Edit` button for each employee has here been replaced by `Edit Employee` and `Destroy Employee` - both buttons function correctly. There is no `Back to companies list` button here but I'm not sure this can be defined as a bug so much as an oversight.
+
 <br><br>
 
 ## Issue 5
@@ -64,6 +80,7 @@ This persists when the field is filled. I next submitted the form with the surna
 Clearly the field labelled `Surname` is actually the `Middlename` field, and the real `Surname` field is not displayed, hence always blank.
 
 <br><br>
+
 ![site map new](https://user-images.githubusercontent.com/52076323/84813191-74428e80-b007-11ea-8bc1-deaa87755217.jpeg)
 
 <br><br>
@@ -73,6 +90,7 @@ Clearly the field labelled `Surname` is actually the `Middlename` field, and the
 * `/companies/[n]` always displays details for row 1 of the database table
 * `Edit` links are incorrectly defined on `/companies/[n]`
 * Fields are incorrectly labelled on `/companies/[n]/employees/new`
+
 <br><br>
 
 ## Recommendations
@@ -116,6 +134,6 @@ These actions dealt with all three bugs. My last action was in the name of human
 I used RSpec and Capybara to test my bug fixes. I would ideally have set up the tests first, but with limited time I had to prioritise. To compensate for this and avoid evergreen testing, I made sure to purposefully write a failing version first, searching for content that I know not to be there.<br>
 I began with a couple of smoke tests, before focusing on the bug fixes. I am happy to report there were no major issues with testing.
 
-<br><br>
+<br>
 
 ![Passing Tests](https://user-images.githubusercontent.com/52076323/84813321-b4097600-b007-11ea-9ae3-bda223847c34.png)
