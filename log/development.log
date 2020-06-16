@@ -328,3 +328,155 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 68ms (Views: 60.2ms | ActiveRecord: 0.0ms | Allocations: 19148)
 
 
+Started GET "/posts/new" for ::1 at 2020-06-16 16:23:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/posts/new"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-06-16 16:23:16 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.0ms | Allocations: 8483)
+
+
+Started GET "/companies" for ::1 at 2020-06-16 16:23:18 +0100
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.erb within layouts/application
+  [1m[36mCompany Load (0.8ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/companies/index.html.erb:15
+  Rendered companies/index.html.erb within layouts/application (Duration: 14.4ms | Allocations: 4567)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 31.5ms | ActiveRecord: 1.7ms | Allocations: 14604)
+
+
+Started GET "/companies" for ::1 at 2020-06-16 16:24:38 +0100
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.erb within layouts/application
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/companies/index.html.erb:15
+  Rendered companies/index.html.erb within layouts/application (Duration: 12.5ms | Allocations: 1518)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 32.4ms | ActiveRecord: 0.3ms | Allocations: 9882)
+
+
+Started GET "/" for ::1 at 2020-06-16 16:24:54 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 86)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms | Allocations: 8276)
+
+
+Started GET "/companies/new" for ::1 at 2020-06-16 16:24:57 +0100
+Processing by CompaniesController#new as HTML
+  Rendering companies/new.html.erb within layouts/application
+  Rendered companies/new.html.erb within layouts/application (Duration: 34.4ms | Allocations: 6388)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 51.1ms | ActiveRecord: 0.0ms | Allocations: 14623)
+
+
+Started GET "/" for ::1 at 2020-06-16 16:31:03 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 85)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.0ms | Allocations: 8376)
+
+
+Started GET "/companies/new" for ::1 at 2020-06-16 16:31:06 +0100
+Processing by CompaniesController#new as HTML
+  Rendering companies/new.html.erb within layouts/application
+  Rendered companies/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 564)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms | Allocations: 8866)
+
+
+Started POST "/companies" for ::1 at 2020-06-16 16:32:39 +0100
+Processing by CompaniesController#create as HTML
+  Parameters: {"authenticity_token"=>"7tjwQvb+9dS3wvL2gKNjwOBsidjNJDY6/9s4JuReMGXspVTcTSvOrMYEjEMOd/lCe9udy+VUeG95w73MSGNZpw==", "company"=>{"name"=>"", "details"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/companies_controller.rb:21:in `create'
+  [1m[36mCompany Create (0.7ms)[0m  [1m[32mINSERT INTO "companies" ("name", "details", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", ""], ["details", ""], ["created_at", "2020-06-16 15:32:39.144159"], ["updated_at", "2020-06-16 15:32:39.144159"]]
+  ↳ app/controllers/companies_controller.rb:21:in `create'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/companies_controller.rb:21:in `create'
+Redirected to http://localhost:3000/companies/6/employees
+Completed 302 Found in 10ms (ActiveRecord: 2.1ms | Allocations: 3112)
+
+
+Started GET "/companies/6/employees" for ::1 at 2020-06-16 16:32:39 +0100
+Processing by EmployeesController#index as HTML
+  Parameters: {"company_id"=>"6"}
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:53:in `find_company'
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."company_id" = ?[0m  [["company_id", 6]]
+  ↳ app/views/employees/index.html.erb:15
+  Rendered employees/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 2104)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 31.2ms | ActiveRecord: 0.7ms | Allocations: 14170)
+
+
+Started GET "/" for ::1 at 2020-06-16 16:33:33 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 85)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 8460)
+
+
+Started GET "/companies" for ::1 at 2020-06-16 16:33:36 +0100
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.erb within layouts/application
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/companies/index.html.erb:15
+  Rendered companies/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1295)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.2ms | Allocations: 9589)
+
+
+Started GET "/companies/2/employees" for ::1 at 2020-06-16 16:33:37 +0100
+Processing by EmployeesController#index as HTML
+  Parameters: {"company_id"=>"2"}
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:53:in `find_company'
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."company_id" = ?[0m  [["company_id", 2]]
+  ↳ app/views/employees/index.html.erb:15
+  Rendered employees/index.html.erb within layouts/application (Duration: 29.9ms | Allocations: 7987)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 48.0ms | ActiveRecord: 0.7ms | Allocations: 16747)
+
+
