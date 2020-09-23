@@ -480,3 +480,58 @@ Processing by EmployeesController#index as HTML
 Completed 200 OK in 51ms (Views: 48.0ms | ActiveRecord: 0.7ms | Allocations: 16747)
 
 
+Started GET "/" for ::1 at 2020-06-16 20:48:28 +0100
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 338)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 131ms (Views: 120.2ms | ActiveRecord: 0.0ms | Allocations: 19098)
+
+
+Started GET "/companies" for ::1 at 2020-06-16 20:48:30 +0100
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.erb within layouts/application
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/companies/index.html.erb:15
+  Rendered companies/index.html.erb within layouts/application (Duration: 18.4ms | Allocations: 4659)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 37.0ms | ActiveRecord: 1.9ms | Allocations: 14763)
+
+
+Started DELETE "/companies/1" for ::1 at 2020-06-16 20:48:32 +0100
+Processing by CompaniesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ImpQYz/XcDYuLi+laeOMXmdD/+S+tai/bjgb5S1BELW14au2ivTtVLVuaiDGJXnv73hGTV+TsRmMl93yJPlnnw==", "id"=>"1"}
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/companies_controller.rb:29:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/companies_controller.rb:30:in `destroy'
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."company_id" = ?[0m  [["company_id", 1]]
+  ↳ app/controllers/companies_controller.rb:30:in `destroy'
+  [1m[36mEmployee Destroy (0.8ms)[0m  [1m[31mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/companies_controller.rb:30:in `destroy'
+  [1m[36mEmployee Destroy (0.1ms)[0m  [1m[31mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/companies_controller.rb:30:in `destroy'
+  [1m[36mEmployee Destroy (0.2ms)[0m  [1m[31mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/companies_controller.rb:30:in `destroy'
+  [1m[36mEmployee Destroy (0.1ms)[0m  [1m[31mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/companies_controller.rb:30:in `destroy'
+  [1m[36mCompany Destroy (0.3ms)[0m  [1m[31mDELETE FROM "companies" WHERE "companies"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/companies_controller.rb:30:in `destroy'
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/companies_controller.rb:30:in `destroy'
+Redirected to http://localhost:3000/companies
+Completed 302 Found in 61ms (ActiveRecord: 7.1ms | Allocations: 15337)
+
+
+Started GET "/companies" for ::1 at 2020-06-16 20:48:32 +0100
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.erb within layouts/application
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/companies/index.html.erb:15
+  Rendered companies/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1166)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.3ms | Allocations: 9497)
+
+
